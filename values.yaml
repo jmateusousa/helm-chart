@@ -8,7 +8,7 @@ auth:
 shipaApi:
   port: 8080
   securePort: 8081
-  image: shipasoftware/api:v1.2.1.1
+  image: shipasoftware/api:e4f5d8d3d39d24f4928146543d9df15112cada8d
   pullPolicy: Always
   debug: false
   cnames: []
@@ -18,19 +18,19 @@ license: ""
 shipaCluster:
   # use debug logs in traefik ingress controller
   debug: false
-  
+
   # kubernetes service type for traefik ingress controller (LoadBalancer/ClusterIP)
   serviceType: LoadBalancer
-  
+
   # override traefik ingress controller ip address
   # ip: 10.100.10.11
-  
+
   # use debug logs in istio ingress controller
   istioDebug: false
-  
+
   # kubernetes service type for istio ingress controller (LoadBalancer/ClusterIP)
   istioServiceType: LoadBalancer
-  
+
   # override istio ingress controller ip address
   # istioIp: 10.100.10.11
 
@@ -57,7 +57,7 @@ service:
 
 dashboard:
   enabled: true
-  image: shipasoftware/dashboard:v1.2.1
+  image: shipasoftware/dashboard:341cfca4057e13a2ba875d51058133983395c4ad
 
 etcd:
   debug: false
@@ -85,7 +85,7 @@ postgres:
     size: 10Gi
 
 cli:
-  image: shipasoftware/cli:v1.2.1
+  image: shipasoftware/cli:dde61139a9ebefef0ee2a0fe679a2cb9379699a2
   pullPolicy: Always
 
 metrics:
